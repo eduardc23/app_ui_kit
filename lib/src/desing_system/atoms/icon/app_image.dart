@@ -128,21 +128,21 @@ class AppImage extends StatelessWidget {
         fit: fit,
         loadingBuilder: (context, child, loadingProgress) =>
             loadingProgress == null ? child : _placeholder(context),
-        errorBuilder: (context, _, _) => _error(context),
+        errorBuilder: (context, _, __) => _error(context),
       ),
       AppImageSource.asset => Image.asset(
         assetPath!,
         width: width ?? double.infinity,
         height: height,
         fit: fit,
-        errorBuilder: (context, _, _) => _error(context),
+        errorBuilder: (context, _, __) => _error(context),
       ),
       AppImageSource.file => Image.file(
         file!,
         width: width ?? double.infinity,
         height: height,
         fit: fit,
-        errorBuilder: (context, _, _) => _error(context),
+        errorBuilder: (context, _, __) => _error(context),
       ),
     };
   }
