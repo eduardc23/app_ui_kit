@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../app_ui_kit.dart';
+import '../../design_system/tokens/tokens.dart';
+import '../color_scheme/app_color_scheme.dart';
 
 /// Tema de [Chip] del sistema de diseño.
 ///
@@ -18,9 +19,17 @@ abstract final class AppChipTheme {
       disabledColor: scheme.onSurface.withValues(
         alpha: AppOpacity.disabledSurface,
       ),
-      labelStyle: AppTypography.labelLarge.copyWith(color: scheme.onSurface),
-      secondaryLabelStyle: AppTypography.labelLarge.copyWith(
-        color: scheme.onPrimary,
+      labelStyle: AppTypography.labelMedium.copyWith(
+        color: WidgetStateColor.resolveWith((Set<WidgetState> states) {
+          if (states.contains(WidgetState.disabled)) {
+            return scheme.onSurface
+                .withValues(alpha: AppOpacity.disabledSurface);
+          }
+          if (states.contains(WidgetState.selected)) {
+            return scheme.onPrimary;
+          }
+          return scheme.onSurface;
+        }),
       ),
       iconTheme: IconThemeData(color: scheme.onSurface, size: AppIconSize.sm),
       checkmarkColor: scheme.onPrimary,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../desing_system/tokens/app_opacity.dart';
-import '../../desing_system/tokens/app_radius.dart';
-import '../../desing_system/tokens/app_spacing.dart';
+
+import '../../design_system/tokens/tokens.dart';
 import '../color_scheme/app_color_scheme.dart';
 
 /// Tema global de botones del sistema de diseño.
@@ -69,7 +68,7 @@ abstract final class AppButtonTheme {
         disabledForegroundColor: scheme.onSurface.withValues(
           alpha: AppOpacity.disabled,
         ),
-        side: BorderSide(color: scheme.outline, width: 0.5),
+        side: BorderSide(color: scheme.outline, width: AppBorder.widthThin),
         padding: padding,
         minimumSize: Size(0, height),
         shape: _shape(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../desing_system/tokens/app_colors.dart';
+import '../../design_system/tokens/app_colors.dart';
 
 /// Fábrica de [ColorScheme] que asigna roles semánticos (primary, secondary…)
 /// a los primitivos definidos en [AppColors].

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../app_ui_kit.dart';
+import '../../design_system/tokens/tokens.dart';
+import '../color_scheme/app_color_scheme.dart';
 
 /// Tema global de campos de texto del sistema de diseño.
 ///

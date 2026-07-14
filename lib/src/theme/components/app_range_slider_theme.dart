@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../app_ui_kit.dart';
+import '../../design_system/tokens/tokens.dart';
+import '../color_scheme/app_color_scheme.dart';
 
 /// Tema del [AppRangeSlider] del sistema de diseño.
 ///
@@ -22,7 +23,8 @@ abstract final class AppRangeSliderTheme {
       activeTrackColor: scheme.primary,
       inactiveTrackColor: scheme.surfaceContainerHighest,
       thumbColor: scheme.primary,
-      overlayColor: scheme.primary.withValues(alpha: AppOpacity.disabledSurface),
+      overlayColor:
+          scheme.primary.withValues(alpha: AppOpacity.disabledSurface),
       valueIndicatorColor: scheme.primary,
       valueIndicatorTextStyle: AppTypography.labelSmall.copyWith(
         color: scheme.onPrimary,
@@ -32,13 +34,13 @@ abstract final class AppRangeSliderTheme {
         enabledThumbRadius: AppRadius.lg,
       ),
       showValueIndicator: ShowValueIndicator.onDrag,
-      rangeValueIndicatorShape:
-      const PaddleRangeSliderValueIndicatorShape(),
+      rangeValueIndicatorShape: const PaddleRangeSliderValueIndicatorShape(),
       disabledActiveTrackColor:
-      scheme.onSurface.withValues(alpha: AppOpacity.disabled),
+          scheme.onSurface.withValues(alpha: AppOpacity.disabled),
       disabledInactiveTrackColor:
-      scheme.onSurface.withValues(alpha: AppOpacity.disabledSurface),
-      disabledThumbColor: scheme.onSurface.withValues(alpha: AppOpacity.disabled),
+          scheme.onSurface.withValues(alpha: AppOpacity.disabledSurface),
+      disabledThumbColor:
+          scheme.onSurface.withValues(alpha: AppOpacity.disabled),
     );
   }
 }

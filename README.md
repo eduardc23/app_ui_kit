@@ -2,7 +2,8 @@
 
 <div align="center">
 
-**El design system centralizado de Eventix — consistente, escalable y listo para modo claro y oscuro.**
+**El design system centralizado de Eventix — consistente, escalable y listo para modo claro y
+oscuro.**
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart&logoColor=white)](https://dart.dev)
@@ -15,9 +16,13 @@
 
 ## ¿Qué es esto?
 
-Paquete de Flutter pensado para centralizar el design system de **Eventix**, una app de reservas. Su objetivo es ofrecer una base reutilizable, consistente y escalable para construir pantallas con la misma identidad visual, sin duplicar estilos ni componentes en cada feature.
+Paquete de Flutter pensado para centralizar el design system de **Eventix**, una app de reservas. Su
+objetivo es ofrecer una base reutilizable, consistente y escalable para construir pantallas con la
+misma identidad visual, sin duplicar estilos ni componentes en cada feature.
 
-El kit está organizado con una arquitectura simple y práctica basada en **diseño atómico**: desde átomos como botones, textos, inputs y tarjetas, hasta moléculas como tarjetas de evento, formularios reutilizables y estados vacíos.
+El kit está organizado con una arquitectura simple y práctica basada en **diseño atómico**: desde
+átomos como botones, textos, inputs y tarjetas, hasta moléculas como tarjetas de evento, formularios
+reutilizables y estados vacíos.
 
 ---
 
@@ -37,12 +42,12 @@ El kit está organizado con una arquitectura simple y práctica basada en **dise
 
 Sin un sistema centralizado, cada pantalla termina repitiendo lo mismo:
 
-| Problema | Consecuencia |
-|---|---|
-| Colores y tipografías sueltas | Inconsistencia visual entre pantallas |
-| Espaciados y radios duplicados | Código difícil de mantener |
-| Botones e inputs con estilos propios | Regresiones visuales al escalar |
-| Sin reglas de accesibilidad compartidas | Experiencia fragmentada |
+| Problema                                | Consecuencia                          |
+|-----------------------------------------|---------------------------------------|
+| Colores y tipografías sueltas           | Inconsistencia visual entre pantallas |
+| Espaciados y radios duplicados          | Código difícil de mantener            |
+| Botones e inputs con estilos propios    | Regresiones visuales al escalar       |
+| Sin reglas de accesibilidad compartidas | Experiencia fragmentada               |
 
 Este paquete evita ese desorden al concentrar todo en una **capa única y reutilizable**.
 
@@ -51,6 +56,7 @@ Este paquete evita ese desorden al concentrar todo en una **capa única y reutil
 ## Qué incluye
 
 ### Tokens de diseño
+
 > Los valores fundamentales de la identidad visual de Eventix.
 
 `Colores` · `Espaciado` · `Radios` · `Sombras` · `Tipografía` · `Duraciones` · `Opacidades`
@@ -60,8 +66,8 @@ Este paquete evita ese desorden al concentrar todo en una **capa única y reutil
 ### Temas globales
 
 ```dart
-AppTheme.light   // Tema claro
-AppTheme.dark    // Tema oscuro
+AppTheme.light // Tema claro
+AppTheme.dark // Tema oscuro
 ```
 
 ---
@@ -70,16 +76,16 @@ AppTheme.dark    // Tema oscuro
 
 Componentes base sin dependencias internas:
 
-| Widget | Descripción |
-|---|---|
-| `AppButton` | Botones con variantes (primary, secondary, etc.) |
-| `AppText` | Texto con variantes tipográficas del sistema |
-| `AppTextField` | Input de texto estilizado |
-| `AppChip` | Chips de selección o etiqueta |
-| `AppCard` | Tarjeta base con elevación y radio |
-| `AppLoader` | Indicadores de carga |
-| `AppRangeSlider` | Slider de rango doble |
-| `AppIcon` / `AppImage` | Iconos e imágenes base |
+| Widget                 | Descripción                                      |
+|------------------------|--------------------------------------------------|
+| `AppButton`            | Botones con variantes (primary, secondary, etc.) |
+| `AppText`              | Texto con variantes tipográficas del sistema     |
+| `AppTextField`         | Input de texto estilizado                        |
+| `AppChip`              | Chips de selección o etiqueta                    |
+| `AppCard`              | Tarjeta base con elevación y radio               |
+| `AppLoader`            | Indicadores de carga                             |
+| `AppRangeSlider`       | Slider de rango doble                            |
+| `AppIcon` / `AppImage` | Iconos e imágenes base                           |
 
 ---
 
@@ -87,18 +93,20 @@ Componentes base sin dependencias internas:
 
 Componentes compuestos que combinan átomos:
 
-| Widget | Descripción |
-|---|---|
-| `EventCard` | Tarjeta completa de evento |
-| `MetadataRow` | Filas de metadatos para tarjetas |
-| `FormField` | Campos reutilizables de formulario |
-| `EmptyState` | Estados vacíos ilustrados |
+| Widget          | Descripción                                                            |
+|-----------------|------------------------------------------------------------------------|
+| `EventCard`     | Tarjeta completa de evento                                             |
+| `MetadataRow`   | Filas de metadatos para tarjetas                                       |
+| `EmailField`    | Campo especializado para emails con configuración de teclado.          |
+| `PasswordField` | Campo de contraseña con gestión interna de visibilidad (toggle).       |
+| `UsernameField` | Campo optimizado para nombres de usuario con restricciones de formato. |
+| `EmptyState`    | Estados vacíos ilustrados                                              |
 
 ---
 
 ### Utilidades
 
-- Extensiones de spacing para `BuildContext`
+- Extensiones de espaciado sobre double (para tokens de diseño)
 - Helpers de fecha y hora
 - Soporte base para internacionalización (`AppIntl`)
 
@@ -129,7 +137,7 @@ dependencies:
   app_ui_kit:
     git:
       url: https://github.com/eduardc23/app_ui_kit.git
-      ref: v1.0.0
+      ref: v2.0.0
 ```
 
 ```bash
@@ -140,7 +148,9 @@ flutter pub get
 
 ## Inicialización requerida
 
-> **Importante:** el paquete incluye soporte de internacionalización que **debe inicializarse antes de `runApp`**. Si omites este paso, obtendrás errores en tiempo de ejecución al usar helpers de fecha y hora.
+> **Importante:** el paquete incluye soporte de internacionalización que **debe inicializarse antes
+de `runApp`**. Si omites este paso, obtendrás errores en tiempo de ejecución al usar helpers de
+> fecha y hora.
 
 Llama a `AppIntl.initialize()` en tu `main()`:
 
@@ -155,7 +165,8 @@ void main() async {
 }
 ```
 
-Internamente, `AppIntl` utiliza `initializeDateFormatting()` del paquete `intl` para cargar los datos de localización:
+Internamente, `AppIntl` utiliza `initializeDateFormatting()` del paquete `intl` para cargar los
+datos de localización:
 
 ```dart
 import 'package:intl/date_symbol_data_local.dart';
@@ -171,7 +182,8 @@ abstract final class AppIntl {
 
 ## Uso básico
 
-Importa el paquete y aplica el tema en tu `MaterialApp`. El sistema de diseño se integra naturalmente con los widgets de Flutter, potenciando la consistencia mediante tokens.
+Importa el paquete y aplica el tema en tu `MaterialApp`. El sistema de diseño se integra
+naturalmente con los widgets de Flutter, potenciando la consistencia mediante tokens.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -190,8 +202,10 @@ class EventixApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Eventix',
-      theme: AppTheme.light,       // ← Uso del tema claro del sistema
-      darkTheme: AppTheme.dark,    // ← Uso del tema oscuro del sistema
+      theme: AppTheme.light,
+      // ← Uso del tema claro del sistema
+      darkTheme: AppTheme.dark,
+      // ← Uso del tema oscuro del sistema
       themeMode: ThemeMode.system,
       home: const HomeScreen(),
     );
@@ -219,7 +233,7 @@ class HomeScreen extends StatelessWidget {
               variant: AppTextVariant.headlineSmall,
             ),
             const SizedBox(height: AppSpacing.md),
-            
+
             // AppTextField: input estilizado con los estados del design system
             AppTextField(
               label: 'Buscar',
@@ -257,7 +271,7 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      // AppButton: botones con variantes (primary, secondary, etc.)
+                      // AppButton: botones con variantes (primary, secondary)
                       AppButton.primary(
                         label: 'Comprar Entradas',
                         onPressed: () {},
@@ -285,9 +299,10 @@ Consulta el archivo [`CHANGELOG.md`](CHANGELOG.md) para ver el historial de camb
 
 ## Licencia y Autor
 
-| | |
-|---|---|
-| **Autor** | [Eduard](https://github.com/eduardc23) |
-| **Licencia** | [MIT](LICENSE) |
+|              |                                        |
+|--------------|----------------------------------------|
+| **Autor**    | [Eduard](https://github.com/eduardc23) |
+| **Licencia** | [MIT](LICENSE)                         |
 
-Este proyecto está bajo la **Licencia MIT** — puedes usarlo, modificarlo y distribuirlo libremente con atribución.
+Este proyecto está bajo la **Licencia MIT** — puedes usarlo, modificarlo y distribuirlo libremente
+con atribución.

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../desing_system/tokens/app_radius.dart';
+
+import '../../design_system/tokens/tokens.dart';
 import '../color_scheme/app_color_scheme.dart';
-import '../../desing_system/tokens/app_shadows.dart';
 
 /// Tema de tarjetas ([Card]) del sistema de diseño.
 ///

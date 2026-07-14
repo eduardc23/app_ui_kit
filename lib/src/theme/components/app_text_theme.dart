@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../desing_system/tokens/app_typography.dart';
+import '../../design_system/tokens/app_typography.dart';
 import '../color_scheme/app_color_scheme.dart';
 
 /// Tema tipográfico del sistema de diseño.

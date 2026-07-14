@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../desing_system/tokens/app_icon_size.dart';
-import '../../desing_system/tokens/app_typography.dart';
+
+import '../../design_system/tokens/tokens.dart';
 import '../color_scheme/app_color_scheme.dart';
 
 /// Tema del [AppBar] del sistema de diseño.
