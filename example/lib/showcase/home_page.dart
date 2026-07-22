@@ -19,6 +19,7 @@ import 'atoms/images_page.dart';
 import 'molecules/cards_page.dart';
 import 'molecules/banners_page.dart';
 import 'molecules/forms_page.dart';
+import 'templates/scaffolds_page.dart';
 
 class HomePage extends StatelessWidget {
   final VoidCallback onToggleTheme;
@@ -32,7 +33,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(
         title: const AppText('UI Kit Showcase',
             variant: AppTextVariant.titleLarge),
@@ -145,6 +146,12 @@ class HomePage extends StatelessWidget {
             onTap: () => Navigator.push(
                 context, MaterialPageRoute(builder: (_) => const FormsPage())),
           ),
+          const _CategoryHeader(title: 'Templates'),
+          _ShowcaseTile(
+            title: 'App Scaffold',
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const ScaffoldsPage())),
+          ),
         ],
       ),
     );
@@ -168,7 +175,7 @@ class _CategoryHeader extends StatelessWidget {
       child: AppText(
         title,
         variant: AppTextVariant.titleLarge,
-        color: Theme.of(context).colorScheme.primary,
+        color: context.colorScheme.primary,
       ),
     );
   }

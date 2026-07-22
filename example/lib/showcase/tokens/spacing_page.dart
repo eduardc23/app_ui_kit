@@ -6,7 +6,7 @@ class SpacingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Spacing', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -54,7 +54,7 @@ class _SpacingRow extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Container(
                 width: value,
-                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
+                color: context.colorScheme.primary.withValues(alpha: 0.5),
               ),
             ),
           ),

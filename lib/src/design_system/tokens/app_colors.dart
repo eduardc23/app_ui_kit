@@ -132,4 +132,16 @@ abstract final class AppColors {
 
   /// Negro puro. shadow, scrim, y tokens `on-` sobre colores vibrantes.
   static const Color black = Color(0xFF000000);
+
+  // ── Green ── (success)
+  static const Color green100 = Color(0xFFDCFCE7);
+  static const Color green400 = Color(0xFF16A34A);
+  static const Color green700 = Color(0xFF14532D);
+  static const Color green200 = Color(0xFFBBF7D0);
+
+  // ── Amber ── (warning)
+  static const Color amber100 = Color(0xFFFEF9C3);
+  static const Color amber400 = Color(0xFFCA8A04);
+  static const Color amber700 = Color(0xFF713F12);
+  static const Color amber200 = Color(0xFFFDE68A);
 }

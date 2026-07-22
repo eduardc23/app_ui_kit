@@ -6,7 +6,7 @@ class TypographyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Typography', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,
@@ -89,7 +89,7 @@ class _ShowcaseSection extends StatelessWidget {
         AppText(
           title,
           variant: AppTextVariant.titleSmall,
-          color: Theme.of(context).colorScheme.primary,
+          color: context.colorScheme.primary,
         ),
         const Divider(),
         AppSpacing.sm.vGap,

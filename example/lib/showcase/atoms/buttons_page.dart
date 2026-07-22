@@ -6,7 +6,7 @@ class ButtonsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Buttons', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,
@@ -61,6 +61,30 @@ class ButtonsPage extends StatelessWidget {
               label: 'Expanded Button',
               onPressed: () {},
               expanded: true,
+            ),
+          ),
+          _ShowcaseSection(
+            title: 'Text Buttons',
+            child: Wrap(
+              spacing: AppSpacing.xs,
+              runSpacing: AppSpacing.sm,
+              children: [
+                AppTextButton(
+                  label: 'Text Button',
+                  variant: AppTextVariant.bodyMedium,
+                  onPressed: () {},
+                ),
+                AppTextButton(
+                  label: 'Small',
+                  variant: AppTextVariant.labelSmall,
+                  onPressed: () {},
+                ),
+                AppTextButton(
+                  label: 'Disabled',
+                  variant: AppTextVariant.bodyMedium,
+                  onPressed: null,
+                ),
+              ],
             ),
           ),
         ],

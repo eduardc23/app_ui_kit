@@ -6,7 +6,7 @@ class BannersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Banners & States', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,
@@ -19,6 +19,25 @@ class BannersPage extends StatelessWidget {
               description: 'Try adjusting your filters or searching for something else.',
               actionLabel: 'Clear Filters',
               onAction: () {},
+            ),
+          ),
+          _ShowcaseSection(
+            title: 'Feedback Banners',
+            child: const Column(
+              children: [
+                AppFeedbackBanner.success(
+                  message: 'Su operación se ha realizado con éxito.',
+                ),
+                AppFeedbackBanner.info(
+                  message: 'Recuerda que puedes cambiar esta configuración en ajustes.',
+                ),
+                AppFeedbackBanner.warning(
+                  message: 'Tu suscripción expirará en 3 días. Renueva ahora.',
+                ),
+                AppFeedbackBanner.error(
+                  message: 'No se pudo conectar al servidor. Inténtalo de nuevo.',
+                ),
+              ],
             ),
           ),
           _ShowcaseSection(

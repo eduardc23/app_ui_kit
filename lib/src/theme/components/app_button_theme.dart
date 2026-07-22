@@ -68,6 +68,9 @@ abstract final class AppButtonTheme {
         disabledForegroundColor: scheme.onSurface.withValues(
           alpha: AppOpacity.disabled,
         ),
+        disabledBackgroundColor: scheme.onSurface.withValues(
+          alpha: AppOpacity.disabledSurface,
+        ),
         side: BorderSide(color: scheme.outline, width: AppBorder.widthThin),
         padding: padding,
         minimumSize: Size(0, height),

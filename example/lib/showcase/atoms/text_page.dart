@@ -6,7 +6,7 @@ class TextPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Text (Atom)', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,
@@ -49,7 +49,7 @@ class TextPage extends StatelessWidget {
             child: Container(
               width: 200,
               padding: AppSpacing.xs.all,
-              color: Theme.of(context).colorScheme.surfaceContainerHighest,
+              color: context.colorScheme.surfaceContainerHighest,
               child: const AppText(
                 'This is a very long text that will not fit in the container and should show ellipsis',
                 variant: AppTextVariant.bodyMedium,
@@ -63,7 +63,7 @@ class TextPage extends StatelessWidget {
             child: Container(
               width: 200,
               padding: AppSpacing.xs.all,
-              color: Theme.of(context).colorScheme.surfaceContainerHighest,
+              color: context.colorScheme.surfaceContainerHighest,
               child: const AppText(
                 'This is a very long text that should be limited to exactly two lines of content.',
                 variant: AppTextVariant.bodyMedium,

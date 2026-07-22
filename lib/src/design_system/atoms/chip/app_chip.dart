@@ -97,6 +97,7 @@ class AppChip extends StatelessWidget {
           showCheckmark: false,
           onSelected: onSelected,
         ),
+
     };
   }
 }

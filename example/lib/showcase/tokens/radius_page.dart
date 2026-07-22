@@ -15,7 +15,7 @@ class RadiusPage extends StatelessWidget {
       'full': AppRadius.full,
     };
 
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Radius', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,
@@ -32,7 +32,7 @@ class RadiusPage extends StatelessWidget {
                       width: 80,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primaryContainer,
+                        color: context.colorScheme.primaryContainer,
                         borderRadius: BorderRadius.circular(e.value),
                       ),
                       child: Center(

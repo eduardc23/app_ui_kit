@@ -6,7 +6,7 @@ class LoadersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Loaders', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: const EdgeInsets.all(16),

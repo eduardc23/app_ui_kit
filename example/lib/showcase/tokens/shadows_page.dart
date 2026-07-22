@@ -15,7 +15,7 @@ class ShadowsPage extends StatelessWidget {
       'xxl': AppElevation.xxl,
     };
 
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Shadows', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,

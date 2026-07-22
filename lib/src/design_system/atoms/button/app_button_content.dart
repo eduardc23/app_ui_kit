@@ -4,6 +4,7 @@ import '../loader/app_loader.dart';
 import '../text/app_text.dart';
 import '../text/app_text_variant.dart';
 import 'app_button.dart';
+import '../../../utils/extensions/extensions.dart';
 
 /// Contenido interno del [AppButton].
 ///
@@ -28,7 +29,7 @@ class AppButtonContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ColorScheme scheme = Theme.of(context).colorScheme;
+    final ColorScheme scheme = context.colorScheme;
     final Color loaderColor = switch (variant) {
       AppButtonVariant.primary => scheme.onPrimary,
       AppButtonVariant.secondary => scheme.primary,

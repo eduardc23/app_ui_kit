@@ -90,8 +90,8 @@ class AppImage extends StatelessWidget {
   // ── Helpers privados de estado ────────────────────────────────────────────
 
   Widget _placeholder(BuildContext context) {
-    final color = placeholderColor ??
-        Theme.of(context).colorScheme.surfaceContainerHighest;
+    final color =
+        placeholderColor ?? context.colorScheme.surfaceContainerHighest;
     return ColoredBox(
       color: color,
       child: SizedBox(
@@ -103,7 +103,7 @@ class AppImage extends StatelessWidget {
   }
 
   Widget _error(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final colorScheme = context.colorScheme;
     return ColoredBox(
       color: placeholderColor ?? colorScheme.surfaceContainerHighest,
       child: SizedBox(

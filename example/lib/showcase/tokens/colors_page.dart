@@ -8,7 +8,7 @@ class ColorsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      child: Scaffold(
+      child: AppScaffold(
         appBar: AppBar(
           title: const AppText('Colors', variant: AppTextVariant.titleLarge),
           bottom: const TabBar(
@@ -129,6 +129,32 @@ class _PrimitivesTab extends StatelessWidget {
             ],
           ),
         ),
+        _ShowcaseSection(
+          title: 'Success (Green)',
+          child: Wrap(
+            spacing: AppSpacing.xs,
+            runSpacing: AppSpacing.xs,
+            children: [
+              _ColorCard(color: AppColors.green100, name: 'green100'),
+              _ColorCard(color: AppColors.green200, name: 'green200'),
+              _ColorCard(color: AppColors.green400, name: 'green400'),
+              _ColorCard(color: AppColors.green700, name: 'green700'),
+            ],
+          ),
+        ),
+        _ShowcaseSection(
+          title: 'Warning (Amber)',
+          child: Wrap(
+            spacing: AppSpacing.xs,
+            runSpacing: AppSpacing.xs,
+            children: [
+              _ColorCard(color: AppColors.amber100, name: 'amber100'),
+              _ColorCard(color: AppColors.amber200, name: 'amber200'),
+              _ColorCard(color: AppColors.amber400, name: 'amber400'),
+              _ColorCard(color: AppColors.amber700, name: 'amber700'),
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -139,8 +165,8 @@ class _SemanticTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final scheme = context.colorScheme;
+    final isDark = context.isDarkMode;
 
     return ListView(
       padding: AppSpacing.md.all,

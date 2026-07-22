@@ -14,7 +14,7 @@ class _RangeSlidersPageState extends State<RangeSlidersPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Range Sliders', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,

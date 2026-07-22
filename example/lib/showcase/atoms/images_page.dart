@@ -79,12 +79,19 @@ class _ImagesPageState extends State<ImagesPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Images', variant: AppTextVariant.titleLarge)),
       body: ListView(
+        scrollDirection: Axis.horizontal,
         padding: AppSpacing.md.all,
         children: [
-          const _ShowcaseSection(
+          AppImage.network(
+            'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=400',
+            height: 200,
+            //width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          /*const _ShowcaseSection(
             title: 'Asset Image',
             child: AppImage.asset(
               'assets/flutter_image.png',
@@ -111,7 +118,7 @@ class _ImagesPageState extends State<ImagesPage> {
               'https://invalid-url.com/image.jpg',
               height: 200,
             ),
-          ),
+          ),*/
         ],
       ),
     );

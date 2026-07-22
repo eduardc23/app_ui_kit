@@ -6,7 +6,7 @@ class EventCardsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Event Cards', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,

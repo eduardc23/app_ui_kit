@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../tokens/app_border.dart';
 import '../../tokens/app_icon_size.dart';
+import '../../../utils/extensions/extensions.dart';
 
 /// Componente átomo para indicar estados de carga.
 ///
@@ -43,7 +44,7 @@ class AppLoader extends StatelessWidget {
       height: size,
       child: CircularProgressIndicator(
         strokeWidth: strokeWidth,
-        color: color ?? Theme.of(context).colorScheme.primary,
+        color: color ?? context.colorScheme.primary,
       ),
     );
   }

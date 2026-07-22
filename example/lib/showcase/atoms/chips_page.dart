@@ -14,7 +14,7 @@ class _ChipsPageState extends State<ChipsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(title: const AppText('Chips', variant: AppTextVariant.titleLarge)),
       body: ListView(
         padding: AppSpacing.md.all,
